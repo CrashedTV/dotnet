@@ -167,3 +167,8 @@ for(int i = 0; i <= 10 ; i++)
     }
     Console.WriteLine(i);
 }
+
+
+// Methods and Functions
+// Funtion Definition, Paramters, Arguments, 
+// Return Type, Void, Method Overloading, Recursion
