@@ -42,5 +42,23 @@ namespace Day4
 
 
 // 3. Write a recursive method 'int SumUpTo(int n)' that returns the sum of all numbers from 1 to n. Verify: SumUpTo(5) = 15.
+Console.WriteLine("Enter a number: ");
+int num = int.Parse(Console.ReadLine());
+int SumUpTo(int n)
+{
+    if (n <= 1)
+    {
+        return n;
+    }
+    else
+    {
+        return n + SumUpTo(n - 1);
+    }
+}
+int result = SumUpTo(num);
+Console.WriteLine($"Sum up to {num} is: {result}");
+
+
+
 
 // 4. Write a method that takes a string and uses a for loop to count how many vowels (a, e, i, o, u) it contains. Return that count.
