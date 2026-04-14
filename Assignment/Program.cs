@@ -5,12 +5,12 @@
 
 // int num = 7;
 Console.WriteLine("Enter number you want to print:");
-int num = int .Parse(Console.ReadLine());
+int num = int.Parse(Console.ReadLine());
 int multiply;
-for(int i = 1; i<=10; i++)
+for (int i = 1; i <= 10; i++)
 {
     multiply = num * i;
-    Console.WriteLine($"{num} * {i} = {multiply}"); 
+    Console.WriteLine($"{num} * {i} = {multiply}");
 }
 
 
@@ -22,19 +22,19 @@ Console.WriteLine("Enter a season number (1-4)");
 int num = int.Parse(Console.ReadLine());
 switch (num)
 {
-    case 1 :
+    case 1:
         Console.WriteLine("Spring");
         break;
-    case 2 :
+    case 2:
         Console.WriteLine("Summer");
         break;
-    case 3 :
+    case 3:
         Console.WriteLine("Autumn");
         break;
-    case 4 :
+    case 4:
         Console.WriteLine("Winter");
         break;
-    default :
+    default:
         Console.WriteLine("Invalid Input. Please choose between 1 and 4");
         break;
 }
@@ -49,24 +49,24 @@ while (balance > 0)
     Console.WriteLine("Enter the amount that you want to withdraw: ");
     int withdraw = int.Parse(Console.ReadLine());
     balance -= withdraw;
-    if(balance <= 0)
+    if (balance <= 0)
     {
         Console.WriteLine($"You don't have {withdraw} balance in your account.");
         break;
     }
     Console.WriteLine($"Your remaining balance is: {balance}");
-    
+
 }
 
 
 // 4. Print all numbers from 1 to 100 that are divisible by both 3 and 5 using a for loop and the modulus
 // operator.
 Console.WriteLine("The numbers that can be divisible by both 3 and 5 are: ");
-for(int i = 1 ; i <= 100 ; i++)
+for (int i = 1; i <= 100; i++)
 {
-    if((i % 3 == 0) && (i % 5 == 0))
+    if ((i % 3 == 0) && (i % 5 == 0))
     {
         Console.WriteLine(i);
     }
-    
+
 }
