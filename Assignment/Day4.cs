@@ -19,6 +19,27 @@ namespace Day4
 
 
 // 2. Write an overloaded method 'string Describe(int n)' and 'string Describe(double n)' — each returns a sentence describing the number.
+namespace Day4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Describe(8));
+            Console.WriteLine(Describe(8848.84));
+        }
+
+        static string Describe(int n)
+        {
+            return $"{n} is an integer.";
+        }
+        static string Describe(double n)
+        {
+            return $"{n} is a double number.";
+        }
+    }
+}
+
 
 // 3. Write a recursive method 'int SumUpTo(int n)' that returns the sum of all numbers from 1 to n. Verify: SumUpTo(5) = 15.
 
