@@ -1,4 +1,5 @@
-﻿// Methods and Functions
+﻿using System;
+// Methods and Functions
 // Funtion Definition, Paramters, Arguments, 
 // Return Type, Void, Method Overloading, Recursion
 // out and ref parameters (...)
@@ -30,17 +31,38 @@
 // PrintMessage();
 // PrintMessage("World"); 
 
-// Recursion 
-int Factorial(int n)
+// // Recursion 
+// int Factorial(int n)
+// {
+//     if (n == 0 || n == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return n * Factorial(n - 1);
+//     }
+// }
+// int result = Factorial(5);
+// Console.WriteLine($"Factorial is: {result}");
+
+// Static Method -> Extension Method
+namespace Day4
 {
-    if (n == 0 || n == 1)
+    public static class MyExtension
     {
-        return 1;
-    }
-    else
-    {
-        return n * Factorial(n - 1);
+        public static string ConcatName(this string personName)
+        {
+                return personName + " is a student.";
+        }
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                string name = "John";
+                string result = name.ConcatName();
+                Console.WriteLine(result);
+            }
+        }
     }
 }
-int result = Factorial(5);
-Console.WriteLine($"Factorial is: {result}");
