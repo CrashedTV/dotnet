@@ -1,6 +1,7 @@
 ﻿// Methods and Functions
 // Funtion Definition, Paramters, Arguments, 
 // Return Type, Void, Method Overloading, Recursion
+// out and ref parameters (...)
 
 // 1. Methods (Parameteres Return Types, Overloading)
 // Syntax:
