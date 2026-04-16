@@ -61,6 +61,7 @@
 //                      refer the object of derived class.
 
 // example of abstract class
+/*
 class Program
 {
     static void Main(string[] args)
@@ -79,5 +80,54 @@ class Circle : Shape
     public override void Draw()
     {
         Console.WriteLine("Drawing a circle");
+    }
+}
+*/
+
+
+
+// Interface ->    A contract that defines a set of methods and properties that a class must implement.
+//           ->    It cannot contain any implementation, only method signatures and properties.
+//           ->    A class can implement multiple interfaces, allowing for multiple inheritance of behavior.
+
+// example of interface
+class Program
+{
+    static void Main(string[] args)
+    {
+        IWorker worker = new Carpenter();
+        worker.AcquireTools();
+        worker.PerformTask();
+        worker.ReleaseTools();
+    }
+}
+
+public interface IWorkers
+{
+    void AcquireTools();
+}
+public interface IWorker
+{
+    void AcquireTools();
+    void PerformTask();
+    void ReleaseTools();
+
+}
+
+class Carpenter : IWorker, IWorkers
+{
+    public void AcquireTools()
+    {
+        Console.WriteLine("Carpenter acquiring tools");
+    }
+
+    public void PerformTask()
+    {
+        Console.WriteLine("Carpenter performing task");
+    }
+
+    public void ReleaseTools()
+    {
+        Console.WriteLine("Carpenter releasing tools");
     }
 }
