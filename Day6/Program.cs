@@ -20,27 +20,64 @@
 // Krywords Action Purpose
 // 1. try: To define a block of code to be tested for errors while it is being executed.
 // 2. catch: To define a block of code to be executed, if an error occurs in the try block.
-// 3. finally: To define a block of code to be executed, after try and
+// 3. finally: To define a block of code to be executed, after try and catch blocks have been executed.
 // 4. throw: To signal the occurrence of an exception during program execution.
 
 // Syntax of Try-Catch Block
-try
+/*
+    try
+    {
+        // Code that may throw an exception
+    }
+    catch (ExceptionType1 ex)
+    {
+        // Handle ExceptionType1
+    }
+    catch (ExceptionType2 ex)
+    {
+        // Handle ExceptionType2
+    }
+    catch (Exception ex)
+    {
+        // Handle any other exceptions
+    }
+    finally
+    {
+        // Code that will always execute, regardless of whether an exception was thrown or caught
+    }
+*/
+
+
+// Polymorphism
+
+
+
+
+// Abstract Class ->    A class that cannot be instantiated and is meant to be subclassed. 
+//                ->    It can contain abstract methods (without implementation) that must be implemented by derived classes, 
+//                      as well as concrete methods (with implementation).
+//                ->    It must be override.    
+//                ->    We cannot create the object of abstract class but we can create the reference of abstract class and we can 
+//                      refer the object of derived class.
+
+// example of abstract class
+class Program
 {
-    // Code that may throw an exception
+    static void Main(string[] args)
+    {
+        Shape shape = new Circle(); // We can create reference of abstract class and refer the object of derived class
+        shape.Draw(); // Output: Drawing a circle
+    }
 }
-catch (ExceptionType1 ex)
+abstract class Shape
 {
-    // Handle ExceptionType1
+    public abstract void Draw(); // Abstract method
 }
-catch (ExceptionType2 ex)
+
+class Circle : Shape
 {
-    // Handle ExceptionType2
-}
-catch (Exception ex)
-{
-    // Handle any other exceptions
-}
-finally
-{
-    // Code that will always execute, regardless of whether an exception was thrown or caught
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a circle");
+    }
 }
