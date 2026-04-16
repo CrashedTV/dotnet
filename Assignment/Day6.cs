@@ -11,7 +11,7 @@ namespace Assignment
                 int age = int.Parse(Console.ReadLine());
                 if (age < 18)
                 {
-                    throw new Exception("You are underage and not eligible.");
+                    throw new Exception("You are not eligible.");
                 }
                 else
                 {
